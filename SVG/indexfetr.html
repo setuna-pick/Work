@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls-1 {
+          fill: #f6c;
+          stroke: #f6c;
+          stroke-miterlimit: 10;
+          stroke-width: 20px;
+          /*animation: scaleanime 2s infinite;*/
+        }
+        .anime{
+            animation: scaleanime 2s infinite;
+        }
+        @keyframes scaleanime{
+            0%{
+                transform-origin: 360px 760px;
+                transform: scale(1,1);
+            }
+            50%{
+                transform-origin: 360px 760px;
+                transform: scale(.8,.8);
+            }
+            100%{
+                transform-origin: 360px 760px;
+                transform: scale(1,1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="764" height="764" viewBox="0 0 764 764">
+                <defs>
+                </defs>
+                <path class="cls-1" d="M381.15,666l-251.72-251.75c-53.917-53.911-53.921-141.323-.01-195.24,53.911-53.917,141.323-53.921,195.24-.01l56.49,56.49,56.49-56.49c53.917-53.911,141.329-53.907,195.24,.01s53.907,141.329-.01,195.24l-251.72,251.75Z"/>
+              </svg>
+        </p>
+    </main>
+    <script>
+        window.addEventListener('DOMContentLoaded',()=>{
+            const cls1 = document.querySelector('.cls-1')
+            cls1.addEventListener('click',()=>{
+                cls1.classList.toggle('anime');
+            });
+        });
+    </script>
+</body>
+</html>
